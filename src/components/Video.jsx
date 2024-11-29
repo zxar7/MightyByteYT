@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useState, useEffect } from "react";
 import { StyleSheet, View, Text, Image, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
@@ -25,8 +24,8 @@ const styles = StyleSheet.create({
 
 const Video = ({ details }) => {
   const { width: screenWidth } = Dimensions.get("window");
-  const { title, thumbnails, channelTitle, liveBroadcastContent, publishTime } =
-    details.snippet;
+  const { title, thumbnails, channelTitle, publishTime } =
+    details?.snippet || {};
   const { url } = thumbnails.high;
 
   let dateToShow = publishTime.slice(0, 10).split("-").reverse().join("/");
