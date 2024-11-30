@@ -1,2 +1,2 @@
-# Created by Charutha B
+# MightyByte FrontEnd Challenge - Created by Charutha B
 Created with CodeSandbox
